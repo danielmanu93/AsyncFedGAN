@@ -19,3 +19,8 @@ We formulate latency models to estimate the delay of a client in training and up
 Since we are using asynchronous FL, the FL server updates the global model immediately it recieves a local model from a client and the following equations are used to update the global generator and discriminator models.
 
 ![model_update](model_update.png)
+
+We apply three staleness functions to measure the freshness of the global model that client $k$ is training for and is a function of client $k’s$ latency $t_k$, as given below:
+
+![staleness eqns](staleness eqns.png)
+
