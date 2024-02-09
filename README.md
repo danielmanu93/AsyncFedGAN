@@ -24,3 +24,5 @@ We apply three staleness functions to measure the freshness of the global model 
 
 ![staleness_eqns](staleness_eqns.png)
 
+Training the generator and discriminator models consume a huge amount of computing resources for a client. To save the computing resource, energy of clients and accelerate the training process, we introduce a constraint of training generator/discriminator model if the difference in terms of L2
+norm between the uploaded local model and the new global model is no larger than a predefined threshold, i.e.,
