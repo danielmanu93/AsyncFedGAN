@@ -10,7 +10,7 @@ We formulate latency models to estimate the delay of a client in training and up
 
 1. The computing latency of training both models at each client is given by: 
 
-
+![comp_latency](comp_latency.png)
 
 2. The communication latency assuming that clients communicate with the PS via wireless, and the sizes of the generator and discriminator models are $l^{gen}$ and $l^{dis}$, is given by $t_{k}^{comm}= \frac{l^{gen}+l^{dis}}{r_{k}}=\frac{l^{gen}y^{gen}_k+l^{dis}y^{dis}_k}{b\log_{2}(1+\frac{p_kg_{k}}{N_{0}}$
 
