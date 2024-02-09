@@ -22,5 +22,5 @@ Since we are using asynchronous FL, the FL server updates the global model immed
 
 We apply three staleness functions to measure the freshness of the global model that client $k$ is training for and is a function of client $k’s$ latency $t_k$, as given below:
 
-![staleness eqns](staleness eqns.png)
+![staleness_eqns](staleness_eqns.png)
 
