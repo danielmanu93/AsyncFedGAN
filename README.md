@@ -12,8 +12,10 @@ We formulate latency models to estimate the delay of a client in training and up
 
 ![comp_latency](comp_latency.png)
 
-2. The communication latency assuming that clients communicate with the PS via wireless, and the sizes of the generator and discriminator models are $l^{gen}$ and $l^{dis}$, is given by $t_{k}^{comm}= \frac{l^{gen}+l^{dis}}{r_{k}}=\frac{l^{gen}y^{gen}_k+l^{dis}y^{dis}_k}{b\log_{2}(1+\frac{p_kg_{k}}{N_{0}}$
+2. The communication latency assuming that clients communicate with the PS via wireless, and the sizes of the generator and discriminator models are $l^{gen}$ and $l^{dis}$, is given by
+
+![comm_latency](comm_latency.png)
 
 Since we are using asynchronous FL, the FL server updates the global model immediately it recieves a local model from a client and the following equations are used to update the global generator and discriminator models.
-$\theta^{new\_{gen}\_{global}}=(1-\alpha^{gen}_{k}){\theta}^{old\_{gen}\_{global}}+\alpha^{gen}_{k}{\theta}_{k}^{gen\_{local}}$
-$\phi^{new\_{dis}\_{global}}=(1-\alpha^{dis}_{k}){\phi}^{old\_{dis}\_{global}}+\alpha^{dis}_{k}{\phi}_{k}^{dis\_{local}}$
+
+![model_update](model_update.png)
